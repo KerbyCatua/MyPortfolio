@@ -1,0 +1,129 @@
+/* Font Imports - Roboto Mono */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* Color Variables - Supreme High Contrast Theme */
+:root {
+    --color-black: #080808;
+    --color-white: #f5f5f0;
+    --color-accent: #907AD6; /* Violet / Soft Periwinkle */
+    --font-primary: 'Roboto Mono', monospace;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-primary);
+}
+
+/* Base Classes */
+.bg-black { background-color: var(--color-black) !important; }
+.bg-white { background-color: var(--color-white) !important; }
+
+/* Custom Accents */
+.accent-text { color: var(--color-accent) !important; }
+.border-accent { border-color: var(--color-accent) !important; }
+.btn-accent {
+    background-color: var(--color-accent);
+    color: var(--color-black);
+    border: 2px solid var(--color-accent);
+    transition: all 0.3s ease;
+}
+.btn-accent:hover {
+    background-color: transparent !important;
+    color: var(--color-accent) !important;
+}
+
+/* Typography Utilities */
+.tracking-tight { letter-spacing: -2px; }
+.tracking-normal { letter-spacing: normal; }
+.tracking-wide { letter-spacing: 0.15em; }
+.tracking-widest { letter-spacing: 0.25em; }
+
+.fw-lightest { font-weight: 300 !important; }
+.fw-heavy { font-weight: 700 !important; }
+
+/* Nav */
+.brand-logo { 
+    letter-spacing: 0.1em; 
+    font-weight: 700;
+}
+.nav-text {
+    color: rgba(255,255,255,0.6) !important;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+.nav-text:hover { color: var(--color-white) !important; }
+
+/* Hero Section */
+.hero-title {
+    font-size: clamp(3.5rem, 9vw, 8rem);
+    line-height: 0.85;
+}
+.hero-subtitle {
+    font-family: var(--font-primary);
+}
+.profile-circle {
+    width: 350px;
+    height: 350px;
+}
+.status-badge {
+    bottom: 20px;
+    right: -20px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.5);
+    letter-spacing: 0.05em;
+}
+
+/* Slanted Divider using clip path */
+.main-content {
+    clip-path: polygon(0 4vw, 100% 0, 100% 100%, 0 100%);
+    margin-top: -4vw;
+}
+
+/* Typography styles inside white content container */
+.section-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+/* Cards & Outlines */
+.border {
+    border-color: #e0e0d8 !important; /* Soften borders on white bg slightly */
+}
+.border-dark {
+    border-color: #d0d0c8 !important;
+}
+
+.project-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #d0d0c8 !important;
+    background-color: #ffffff;
+}
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 6px 6px 0px #080808;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* Remove rounded corners */
+.rounded-0 { border-radius: 0 !important; }
+
+/* Badge override for Roboto Mono */
+.badge {
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    padding: 0.5em 0.8em;
+}
+
+/* Small adjustments for inputs / contact block */
+.sidebar-wrapper {
+    position: sticky;
+    top: 2rem;
+}
