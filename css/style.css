@@ -1,11 +1,11 @@
-/* Font Imports - Roboto Mono */
+/* roboto mono */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
-/* Color Variables - Supreme High Contrast Theme */
+/* main theme colors */
 :root {
     --color-black: #080808;
     --color-white: #f5f5f0;
-    --color-accent: #907AD6; /* Violet / Soft Periwinkle */
+    --color-accent: #907AD6; /* violet accent */
     --font-primary: 'Roboto Mono', monospace;
 }
 
@@ -19,11 +19,11 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-primary);
 }
 
-/* Base Classes */
+/* bg helpers */
 .bg-black { background-color: var(--color-black) !important; }
 .bg-white { background-color: var(--color-white) !important; }
 
-/* Custom Accents */
+/* violet accents */
 .accent-text { color: var(--color-accent) !important; }
 .border-accent { border-color: var(--color-accent) !important; }
 .btn-accent {
@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-accent) !important;
 }
 
-/* Typography Utilities */
+/* text tweaks */
 .tracking-tight { letter-spacing: -2px; }
 .tracking-normal { letter-spacing: normal; }
 .tracking-wide { letter-spacing: 0.15em; }
@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
 .fw-lightest { font-weight: 300 !important; }
 .fw-heavy { font-weight: 700 !important; }
 
-/* Nav */
+/* navbar */
 .brand-logo { 
     letter-spacing: 0.1em; 
     font-weight: 700;
@@ -60,7 +60,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .nav-text:hover { color: var(--color-white) !important; }
 
-/* Hero Section */
+/* hero area */
 .hero-title {
     font-size: clamp(3.5rem, 9vw, 8rem);
     line-height: 0.85;
@@ -69,8 +69,11 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-primary);
 }
 .profile-circle {
-    width: 350px;
-    height: 350px;
+    /* make sure it scales */
+    width: 100%;
+    max-width: 350px;
+    aspect-ratio: 1 / 1;
+    height: auto;
 }
 .status-badge {
     bottom: 20px;
@@ -79,20 +82,20 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 0.05em;
 }
 
-/* Slanted Divider using clip path */
+/* slanted edge trick */
 .main-content {
     clip-path: polygon(0 4vw, 100% 0, 100% 100%, 0 100%);
     margin-top: -4vw;
 }
 
-/* Typography styles inside white content container */
+/* main section headers */
 .section-title {
     font-size: clamp(2rem, 4vw, 3rem);
 }
 
-/* Cards & Outlines */
+/* borders and cards */
 .border {
-    border-color: #e0e0d8 !important; /* Soften borders on white bg slightly */
+    border-color: #e0e0d8 !important; /* softer borders on light bg */
 }
 .border-dark {
     border-color: #d0d0c8 !important;
@@ -112,18 +115,75 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
 }
 
-/* Remove rounded corners */
+/* force sharp corners */
 .rounded-0 { border-radius: 0 !important; }
 
-/* Badge override for Roboto Mono */
+/* fix badge font */
 .badge {
     font-weight: 500;
     letter-spacing: 0.05em;
     padding: 0.5em 0.8em;
 }
 
-/* Small adjustments for inputs / contact block */
+/* sticky sidebar fix */
 .sidebar-wrapper {
+    position: -webkit-sticky;
     position: sticky;
     top: 2rem;
+    height: fit-content; /* keep it aligned with left col */
+    z-index: 5;
+}
+
+/* =========================================================================
+   --- responsive fixes & margins ---
+   ========================================================================= */
+
+/* 1. stop horizontal scroll (clip keeps sticky working) */
+body, html {
+    overflow-x: clip;
+}
+
+/* 2. break long words so they don't overflow */
+h1, h2, h3, h4, h5, h6, p {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+/* 3. stop weird word wraps in cards */
+.project-card .btn,
+#tech .d-flex span.border {
+    white-space: nowrap;
+}
+
+/* 4. fix card squishing on mid-size screens */
+@media (min-width: 992px) and (max-width: 1399px) {
+    #work .row .col-md-6 {
+        flex: 0 0 auto;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+/* 5. mobile hero and badge tweaks */
+@media (max-width: 576px) {
+    .status-badge {
+        right: 0 !important;
+        bottom: 10px !important;
+        font-size: 0.8rem;
+    }
+    .hero-title {
+        font-size: clamp(2.5rem, 12vw, 4rem); 
+    }
+}
+
+/* 6. wide margins for desktop (wait till 1200px so tablets stay readable) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: calc(100% - 4.1in) !important;
+    }
+}
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1200px !important;
+    }
 }
