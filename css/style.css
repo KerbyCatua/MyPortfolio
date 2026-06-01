@@ -37,6 +37,15 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-accent) !important;
 }
 
+/* Disabled state for the accent button */
+.btn-accent:disabled {
+    background-color: #8a8a8a !important; /* Gray background */
+    border-color: #8a8a8a !important; /* Gray border to match */
+    color: var(--color-black) !important; /* Black text */
+    opacity: 1 !important; /* Forces 100% opacity, overriding Bootstrap */
+    cursor: not-allowed !important; /* Shows a 'restricted' mouse cursor */
+}
+
 /* text tweaks */
 .tracking-tight { letter-spacing: -2px; }
 .tracking-normal { letter-spacing: normal; }

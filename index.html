@@ -56,14 +56,16 @@
                         I craft production-grade applications with C#, ASP.NET Core, Blazor and Angular — applying Clean Architecture, CQRS, and SOLID principles to every project.
                     </p>
                     <div class="d-flex gap-3 flex-wrap">
-                        <a href="#">
-                            <button class="btn btn-accent px-4 py-3 fw-heavy rounded-0 tracking-wide fs-6"><i class="bi bi-envelope me-2"></i> GET IN TOUCH</button>
+                        <!-- TODO: to added the actual link -->
+                        <a onclick="window.location.reload(true)" class="btn btn-accent px-4 py-3 fw-heavy rounded-0 tracking-wide fs-6">
+                            <i class="bi bi-envelope me-2"></i> GET IN TOUCH
                         </a>
-                        <a href="https://github.com/KerbyCatua">
-                            <button class="btn btn-outline-light border-secondary bg-transparent px-4 py-3 fw-bold rounded-0 tracking-wide text-white-50"><i class="bi bi-github me-2"></i> GITHUB</button>
+                        <a href="https://github.com/KerbyCatua" class="btn btn-outline-light border-secondary bg-transparent px-4 py-3 fw-bold rounded-0 tracking-wide text-white-50">
+                            <i class="bi bi-github me-2"></i> GITHUB
                         </a>
-                        <a href="#">
-                            <button class="btn btn-outline-light border-secondary bg-transparent px-4 py-3 fw-bold rounded-0 tracking-wide text-white-50"><i class="bi bi-linkedin me-2"></i> LINKEDIN</button>
+                        <!-- TODO: to added the actual link -->
+                        <a onclick="window.location.reload(true)" class="btn btn-outline-light border-secondary bg-transparent px-4 py-3 fw-bold rounded-0 tracking-wide text-white-50">
+                            <i class="bi bi-linkedin me-2"></i> LINKEDIN
                         </a>
                     </div>
                 </div>
@@ -419,8 +421,8 @@
                 </div>
                 
                 <div class="modal-footer border-top border-dark rounded-0 p-4">
-                    <button type="button" class="btn btn-accent px-4 py-2 fw-bold text-black rounded-0 tracking-wide text-uppercase" data-bs-dismiss="modal">
-                        CONFIRM <i class="bi bi-check2"></i>
+                    <button id="welcomeConfirmBtn" type="button" class="btn btn-accent px-4 py-2 fw-bold text-black rounded-0 tracking-wide text-uppercase" data-bs-dismiss="modal" disabled>
+                        CONFIRM <span id="welcomeCountdown">(5)</span> <i class="bi bi-check2"></i>
                     </button>
                 </div>
                 
