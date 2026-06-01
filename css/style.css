@@ -134,6 +134,46 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 5;
 }
 
+
+
+/* MODAL IMPLEMENTATION STARTS HERE */
+
+/* Fix bottom white gap for the overlay */
+.modal-backdrop {
+    height: 100% !important; /* overrides Bootstrap's 100vh */
+    bottom: 0 !important;
+}
+
+/* Modal Backdrop Blur Effect */
+.modal-backdrop.show {
+    opacity: 1 !important;
+    background-color: rgba(0, 0, 0, 0.80) !important;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+/* Reduce modal width and height to 85% on mobile devices */
+@media (max-width: 576px) {
+    .modal-dialog {
+        width: 85%;
+        height: 85%; /* Constrain the height to 85% of the viewport */
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        align-items: center;
+    }
+    
+    .modal-content {
+        /* Ensure the content boxes don't overflow the 85% height */
+        max-height: 100%;
+        overflow-y: auto; /* Allows scrolling inside if the text is too long */
+    }
+}
+
+/* MODAL IMPLEMENTATION ENDS HERE */
+
+
+
 /* =========================================================================
    --- responsive fixes & margins ---
    ========================================================================= */
