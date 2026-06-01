@@ -1,0 +1,7 @@
+{
+    "github.copilot.chat.commitMessageGeneration.instructions": [
+        { "text": "Write commit messages using the Conventional Commits format:\ntype(scope): short description\n" },
+        { "text": "Guidelines:\n- Keep the title line short (ideally ≤ 50–72 characters).\n- Use bullet points for readability.\n- Focus on what changed, not the detailed implementation where possible.\n" },
+        { "text": "Commit message example:\n\nfeat(auth): add registration, login, and email verification\n\n* Implement BCrypt password hashing\n* Add AccountController for authentication flows\n* Create User and EmailVerification models\n* Add SMTP email service for verification\n* Add Razor views and custom CSS for authentication forms\n* Update appsettings.json with email settings\n* Change the default route to the registration page" }
+    ]
+}
