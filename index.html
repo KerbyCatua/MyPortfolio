@@ -292,25 +292,37 @@
                     <div class="col-lg-6">
                         <div class="project-card p-4 h-100 d-flex flex-column">
                             <div class="d-flex justify-content-between text-muted small fw-bold mb-3 tracking-wide text-uppercase" style="font-size: 0.75rem;">
-                                <span>01 / MUSIC VIDEO</span>
-                                <span class="bg-light px-2 py-1">PREMIERE PRO</span>
+                                <span>01 / MOTION EDIT</span>
+                                <span class="bg-light px-2 py-1 text-black">ALIGHT MOTION PRO</span>
                             </div>
                             
-                            <h4 class="fw-heavy tracking-tight text-uppercase mb-2">Cinematic Highlight Reel</h4>
-                            <p class="text-muted mb-4 fw-light" style="line-height: 1.7; font-size: 0.95rem;">Shot, directed, and edited a cohesive highlight reel showcasing various dynamic environments using DaVinci Resolve for professional color grading.</p>
+                            <h4 class="fw-heavy tracking-tight text-uppercase mb-2">MOTION FAN EDIT</h4>
+                            <p class="text-muted mb-4 fw-light" style="line-height: 1.7; font-size: 0.95rem;">An energetic fan edit crafted with dynamic animations and creative visuals to deliver a stylish and immersive viewing experience.</p>
                             
                             <!-- Video Thumbnail with Play Button Overlay -->
                             <div class="position-relative mb-4">
-                                <img src="assets\img\unavailable.jpg" alt="Video Thumbnail" class="img-fluid border border-dark w-100 object-fit-cover" style="height: 250px;">
-                                <div class="position-absolute top-50 start-50 translate-middle text-white fs-1 cursor-pointer">
-                                    <i class="bi bi-play-circle-fill" style="filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.6));"></i>
+                                <img src="assets\video-edit-samples\edit1-thumbnail.png" alt="Video Thumbnail" class="img-fluid border border-dark w-100 object-fit-cover" style="height: 250px;">
+                                <!-- Trigger Modal on Play icon -->
+                                <div class="position-absolute top-50 start-50 translate-middle text-white fs-1 cursor-pointer"
+                                    data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-src="assets/video-edit-samples/edit1.webm"
+                                    data-video-title="MOTION FAN EDIT"
+                                    data-video-subtitle="01 / MOTION EDIT">
+                                    <i class="bi bi-play-circle-fill" style="filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.6)); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"></i>
                                 </div>
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mt-auto border-top border-dark pt-4">
-                                <!-- TODO: to added the actual link -->
-                                <a onclick="window.location.reload(true)" class="btn bg-danger bg-opacity-10 px-4 py-2 text-danger fw-bold text-uppercase tracking-wide rounded-0" style="font-size: 0.8rem;">WATCH VIDEO <i class="bi bi-play-fill"></i></a>
-                                <span class="text-muted text-uppercase tracking-wide fw-bold" style="font-size: 0.75rem;">CINEMATOGRAPHY</span>
+                                <!-- Trigger Modal on Watch Button, updated to use your accent class -->
+                                <a class="btn btn-accent px-4 py-2 fw-bold text-uppercase tracking-wide rounded-0"
+                                data-bs-toggle="modal" data-bs-target="#videoModal"
+                                data-video-src="assets/video-edit-samples/edit1.webm"
+                                data-video-title="MOTION FAN EDIT"
+                                data-video-subtitle="01 / MOTION EDIT"
+                                style="font-size: 0.8rem; cursor: pointer;">
+                                WATCH VIDEO <i class="bi bi-play-fill"></i>
+                                </a>
+                                <span class="text-muted text-uppercase tracking-wide fw-bold" style="font-size: 0.75rem;">VIDEO EDITING</span>
                             </div>
                         </div>
                     </div>
@@ -323,8 +335,8 @@
                                 <span class="bg-light px-2 py-1">AFTER EFFECTS</span>
                             </div>
                             
-                            <h4 class="fw-heavy tracking-tight text-uppercase mb-2">Creative Documentary</h4>
-                            <p class="text-muted mb-4 fw-light" style="line-height: 1.7; font-size: 0.95rem;">A passion project documentary focused on visual pacing, extensive sound design, and narrative flow. Delivered in stunning full 4K resolution.</p>
+                            <h4 class="fw-heavy tracking-tight text-uppercase mb-2">[TITLE HERE]</h4>
+                            <p class="text-muted mb-4 fw-light" style="line-height: 1.7; font-size: 0.95rem;">[DESCRIPTION HERE]</p>
                             
                             <!-- Video Thumbnail with Play Button Overlay -->
                             <div class="position-relative mb-4">
@@ -447,6 +459,37 @@
                     </button>
                 </div>
                 
+            </div>
+        </div>
+    </div>
+
+    <!-- Reusable Modal Video Player -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <!-- Replicated Design: Sharp corners, black BG, dark borders -->
+            <div class="modal-content bg-black border border-dark rounded-0 p-0 shadow-lg">
+                
+                <!-- Modal Header: Match styling from image -->
+                <div class="modal-header border-bottom border-dark p-4 rounded-0 align-items-center">
+                    <div>
+                        <!-- Subtype / Platform -->
+                        <span id="videoModalSubtitle" class="text-uppercase tracking-widest fw-bold mb-2 d-block accent-text" style="font-size: 0.70rem;"></span>
+                        <!-- Main Title -->
+                        <h3 id="videoModalTitle" class="modal-title text-white text-uppercase fw-heavy tracking-tight m-0" style="font-size: 1.5rem;"></h3>
+                    </div>
+                    <!-- Boxed Close Button -->
+                    <button type="button" class="btn bg-transparent border border-secondary text-white rounded-0 p-0 d-flex align-items-center justify-content-center" data-bs-dismiss="modal" aria-label="Close" style="width: 44px; height: 44px; transition: border-color 0.2s;" onmouseover="this.classList.replace('border-secondary','border-white')" onmouseout="this.classList.replace('border-white', 'border-secondary')">
+                        <i class="bi bi-x-lg fs-5"></i>
+                    </button>
+                </div>
+                
+                <!-- Video Container Block -->
+                <div class="modal-body p-0 bg-black position-relative">
+                    <video id="modalVideoPlayer" class="w-100 h-100 d-block" controls style="outline: none; max-height: 75vh;">
+                        <source src="" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
         </div>
     </div>
