@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // localStorage.removeItem('portfolioFirstVisit')
     // --- Welcome Modal Logic ---
     const welcomeModalElement = document.getElementById('welcomeModal');
-    
     if (welcomeModalElement) {
         // Initialize and show the Bootstrap Modal
         const welcomeModal = new bootstrap.Modal(welcomeModalElement);
