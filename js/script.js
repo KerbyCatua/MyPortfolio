@@ -101,4 +101,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+    // --- Slideshow Logic ---
+    const topImg = document.getElementById('slideshow-top');
+    const bottomImg = document.getElementById('slideshow-bottom');
+    if (topImg && bottomImg) {
+        let currentImageIndex = 1;
+        const totalImages = 6;
+
+        setInterval(() => {
+            // Determine the next image index
+            let nextIndex = currentImageIndex + 1;
+            if (nextIndex > totalImages) {
+                nextIndex = 1;
+            }
+
+            // 1. Lock the bottom image to whatever is currently visible
+            bottomImg.src = `assets/video-edit-samples/edit2/edit2-thumbnail/thumbnail-${currentImageIndex}.png`;
+            
+            // 2. Prep the top image to show the NEXT image, instantly making it transparent
+            topImg.style.transition = 'none';
+            topImg.src = `assets/video-edit-samples/edit2/edit2-thumbnail/thumbnail-${nextIndex}.png`;
+            topImg.style.opacity = 0;
+            
+            // 3. Force browser reflow so the style resets apply immediately
+            void topImg.offsetWidth;
+            
+            // 4. Trigger the 2-second fade IN for the new thumbnail
+            topImg.style.transition = 'opacity 2s ease-in-out';
+            topImg.style.opacity = 1;
+            
+            // 5. Update the current index tracker for the next cycle
+            currentImageIndex = nextIndex;
+            
+        }, 2000); // 2000ms delay between slide transitions
+    }
+    // --- End Slideshow Logic ---
+
+
+
+
 });

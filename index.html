@@ -288,6 +288,7 @@
                 <p class="text-muted mb-5 fw-light" style="line-height: 1.8;">Beyond software development, I am highly passionate about visual storytelling. From capturing cinematic sequences to applying precise post-production edits and advanced color grading, I bring creative visions to life on screen.</p>
 
                 <div class="row g-4">
+
                     <!-- Video Project 1 -->
                     <div class="col-lg-6">
                         <div class="project-card p-4 h-100 d-flex flex-column">
@@ -301,11 +302,11 @@
                             
                             <!-- Video Thumbnail with Play Button Overlay -->
                             <div class="position-relative mb-4">
-                                <img src="assets\video-edit-samples\edit1-thumbnail.png" alt="Video Thumbnail" class="img-fluid border border-dark w-100 object-fit-cover" style="height: 250px;">
+                                <img src="assets\video-edit-samples\edit1\edit1-thumbnail\edit1-thumbnail.png" alt="Video Thumbnail" class="img-fluid border border-dark w-100 object-fit-cover" style="height: 250px;">
                                 <!-- Trigger Modal on Play icon -->
                                 <div class="position-absolute top-50 start-50 translate-middle text-white fs-1 cursor-pointer"
                                     data-bs-toggle="modal" data-bs-target="#videoModal"
-                                    data-video-src="assets/video-edit-samples/edit1.webm"
+                                    data-video-src="assets\video-edit-samples\edit1\edit1.webm"
                                     data-video-title="MOTION FAN EDIT"
                                     data-video-subtitle="01 / MOTION EDIT">
                                     <i class="bi bi-play-circle-fill" style="filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.6)); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"></i>
@@ -316,7 +317,7 @@
                                 <!-- Trigger Modal on Watch Button, updated to use your accent class -->
                                 <a class="btn btn-accent px-4 py-2 fw-bold text-uppercase tracking-wide rounded-0"
                                 data-bs-toggle="modal" data-bs-target="#videoModal"
-                                data-video-src="assets/video-edit-samples/edit1.webm"
+                                data-video-src="assets\video-edit-samples\edit1\edit1.webm"
                                 data-video-title="MOTION FAN EDIT"
                                 data-video-subtitle="01 / MOTION EDIT"
                                 style="font-size: 0.8rem; cursor: pointer;">
@@ -326,33 +327,54 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Video Project 2 -->
                     <div class="col-lg-6">
                         <div class="project-card p-4 h-100 d-flex flex-column">
                             <div class="d-flex justify-content-between text-muted small fw-bold mb-3 tracking-wide text-uppercase" style="font-size: 0.75rem;">
                                 <span>02 / SHORT FILM</span>
-                                <span class="bg-light px-2 py-1">AFTER EFFECTS</span>
+                                <span class="bg-light px-2 py-1 text-black">CAPCUT PRO</span>
                             </div>
                             
-                            <h4 class="fw-heavy tracking-tight text-uppercase mb-2">[TITLE HERE]</h4>
-                            <p class="text-muted mb-4 fw-light" style="line-height: 1.7; font-size: 0.95rem;">[DESCRIPTION HERE]</p>
+                            <h4 class="fw-heavy tracking-tight text-uppercase mb-2">ISANG PANULAT</h4>
+                            <p class="text-muted mb-4 fw-light" style="line-height: 1.7; font-size: 0.95rem;">A thought-provoking adaptation trailer inspired by Jose Rizal's Noli Me Tangere. This short project mirrors modern social realities, challenging viewers to reflect on truth, bravery, and civic consciousness through a cinematic lens.</p>
                             
                             <!-- Video Thumbnail with Play Button Overlay -->
                             <div class="position-relative mb-4">
-                                <img src="assets\img\unavailable.jpg" alt="Video Thumbnail" class="img-fluid border border-dark w-100 object-fit-cover" style="height: 250px;">
-                                <div class="position-absolute top-50 start-50 translate-middle text-white fs-1 cursor-pointer">
-                                    <i class="bi bi-play-circle-fill" style="filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.6));"></i>
+
+                                <!-- Thumbnail: Slide Show -->
+                                <div class="position-relative w-100 border border-dark" style="height: 250px;">
+                                    <!-- Bottom image stays visible in the background -->
+                                    <img id="slideshow-bottom" src="assets/video-edit-samples/edit2/edit2-thumbnail/thumbnail-1.png" alt="Video Thumbnail Background" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover">
+                                    <!-- Top image fades in over the bottom image -->
+                                    <img id="slideshow-top" src="assets/video-edit-samples/edit2/edit2-thumbnail/thumbnail-1.png" alt="Video Thumbnail" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover" style="opacity: 1;">
+                                </div>
+                                
+                                <!-- Trigger Modal on Play icon -->
+                                <div class="position-absolute top-50 start-50 translate-middle text-white fs-1 cursor-pointer"
+                                    data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-src="assets\video-edit-samples\edit2\edit2.webm"
+                                    data-video-title="ISANG PANULAT"
+                                    data-video-subtitle="02 / SHORT FILM">
+                                    <i class="bi bi-play-circle-fill" style="filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.6)); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"></i>
                                 </div>
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mt-auto border-top border-dark pt-4">
-                                <!-- TODO: to added the actual link -->
-                                <a onclick="window.location.reload(true)" class="btn bg-danger bg-opacity-10 px-4 py-2 text-danger fw-bold text-uppercase tracking-wide rounded-0" style="font-size: 0.8rem;">WATCH VIDEO <i class="bi bi-play-fill"></i></a>
-                                <span class="text-muted text-uppercase tracking-wide fw-bold" style="font-size: 0.75rem;">VIDEO EDITING</span>
+                                <!-- Trigger Modal on Watch Button, updated to use your accent class -->
+                                <a class="btn btn-accent px-4 py-2 fw-bold text-uppercase tracking-wide rounded-0"
+                                data-bs-toggle="modal" data-bs-target="#videoModal"
+                                data-video-src="assets\video-edit-samples\edit2\edit2.webm"
+                                data-video-title="ISANG PANULAT"
+                                data-video-subtitle="02 / SHORT FILM"
+                                style="font-size: 0.8rem; cursor: pointer;">
+                                WATCH VIDEO <i class="bi bi-play-fill"></i>
+                                </a>
+                                <span class="text-muted text-uppercase tracking-wide fw-bold" style="font-size: 0.75rem;">VIDEO EDITING / CINEMAROGRAPHY</span>
                             </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
 
