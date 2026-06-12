@@ -236,3 +236,58 @@ h1, h2, h3, h4, h5, h6, p {
         max-width: 1200px !important;
     }
 }
+
+
+
+
+/* Animated Video Anchor starts here */
+
+/* Animated Rotating Glow */
+.video-glow-link {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+/* The spinning glowing gradient */
+.video-glow-link::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+        from 0deg,
+        transparent 0%,
+        transparent 60%,
+        var(--color-accent) 80%,
+        var(--color-accent) 90%,
+        transparent 100%
+    );
+    animation: rotate-glow 3s linear infinite;
+    z-index: -2;
+}
+
+/* The mask that creates the "border" effect */
+.video-glow-link::after {
+    content: "";
+    position: absolute;
+    inset: 1.5px; /* Thickness of the glowing border */
+    background: var(--color-black);
+    z-index: -1;
+    border-radius: inherit; /* Match parent's border-radius for clean corners */
+    transition: background-color 0.3s ease;
+}
+
+.video-glow-link:hover::after {
+    background-color: var(--color-black) !important; /* Reveal more of the glow on hover */
+}
+
+@keyframes rotate-glow {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* End Animated Video Anchor */
