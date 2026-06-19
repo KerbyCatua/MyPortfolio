@@ -291,3 +291,83 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 /* End Animated Video Anchor */
+
+
+
+
+
+
+/* =========================================================================
+   --- PREMIUM NEO-BRUTALIST MICRO-INTERACTIONS & UI REFINEMENTS ---
+   ========================================================================= */
+
+/* Base transition standardizer */
+.transition-all { transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+.transition-transform { transition: transform 0.2s ease-out; }
+
+/* 1. Project Cards: Elevated Depth */
+.project-card {
+    border: 2px solid var(--color-black) !important; /* Thicker border for brutalist feel */
+    background-color: var(--color-white);
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.project-card:hover, .project-card:focus-within {
+    transform: translate(-4px, -4px);
+    box-shadow: 6px 6px 0px var(--color-accent) !important; /* Replaced dark shadow with accent color pop */
+    border-color: var(--color-black) !important;
+}
+.project-card .action-link { transition: color 0.2s ease; }
+.project-card:hover .action-link { color: var(--color-accent) !important; }
+.project-card:hover .transition-icon { transform: translateX(4px); transition: transform 0.3s ease; }
+
+/* 2. Tech Stack Pills: Scannable & Tactile */
+.tech-pill {
+    transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: default;
+    border: 1px solid #d0d0c8 !important; /* Subtle initial border */
+}
+.tech-pill:hover {
+    background-color: var(--color-accent) !important;
+    color: var(--color-black) !important;
+    border-color: var(--color-black) !important;
+    transform: translate(-2px, -2px);
+    box-shadow: 3px 3px 0px var(--color-black);
+}
+
+/* 3. Expertise Badges (About Section) */
+.badge-interactive {
+    transition: all 0.2s ease;
+    background-color: transparent;
+}
+.badge-interactive:hover {
+    transform: translateY(-2px);
+    box-shadow: 2px 2px 0px currentColor; /* Uses the specific success/secondary color as shadow */
+}
+
+/* 4. Brutalist Buttons (Sidebar Socials) */
+.btn-brutal {
+    transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+    background-color: var(--color-white);
+}
+.btn-brutal:hover {
+    background-color: var(--color-accent);
+    color: var(--color-black) !important;
+    border-color: var(--color-black) !important;
+    transform: translate(-2px, -2px);
+    box-shadow: 3px 3px 0px var(--color-black);
+}
+
+/* 5. Contact Email Box Hover State */
+.email-clipboard-box:hover {
+    border-color: var(--color-accent) !important;
+    background-color: #ffffff !important;
+}
+.hover-accent:hover i {
+    color: var(--color-accent) !important;
+    transform: scale(1.15);
+}
+
+/* 6. Typography Flow & Pacing Improvements */
+.about-copy p {
+    margin-bottom: 0; /* Let flex gap control the spacing for perfect rhythm */
+}

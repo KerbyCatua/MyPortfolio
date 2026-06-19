@@ -86,143 +86,187 @@
 
         <div class="container pt-5">
 
-            <div class="row gy-5">
-                <!-- About Me -->
-                <div class="col-lg-7 pe-lg-5" id="about">
-                    <!-- Monospace tracking styles for section tags -->
-                    <p class="text-muted fw-bold text-uppercase tracking-widest small mb-3"><span class="accent-text">//</span> ABOUT ME</p>
-                    <!-- Heavy headings, slightly tightened -->
-                    <h2 class="section-title text-uppercase fw-heavy tracking-tight mb-4 line-height-sm">CRAFTING RELIABLE SOFTWARE,<br>ONE COMMIT AT A TIME.</h2>
+            <div class="row gy-5 neo-layout">
+                <div class="col-lg-7 pe-lg-5">
                     
-                    <p class="text-muted fs-5 mb-4 fw-light" style="line-height: 1.8;">Currently pursuing my Information Technology degree at Pampanga State University (Class of 2028) with a 1.40 CGWA, I am a Jr. .NET Software Developer with hands-on experience delivering real-world solutions using C#, ASP.NET Core, and Microsoft SQL Server.</p>
-                    <p class="text-muted fs-5 mb-4 fw-light" style="line-height: 1.8;">I apply proven software engineering practices including Clean Architecture, CQRS, the Mediator pattern, OOP, and SOLID principles to build scalable and maintainable applications.</p>
-                    <p class="text-muted fs-5 mb-4 fw-light" style="line-height: 1.8;">I consistently deliver high-quality work, which I showcase across GitHub, LinkedIn, and Upwork — as part of my commitment to excellence in the .NET ecosystem.</p>
-                    
-                    <div class="d-flex flex-wrap gap-2 mt-4 text-uppercase">
-                        <span class="badge border border-success bg-transparent text-success rounded-0"><i class="bi bi-check2-circle"></i> CLEAN ARCHITECTURE</span>
-                        <span class="badge border border-success bg-transparent text-success rounded-0"><i class="bi bi-lightning-charge"></i> CQRS + MEDIATR</span>
-                        <span class="badge border border-secondary bg-transparent text-secondary rounded-0"><i class="bi bi-shield"></i> SOLID PRINCIPLES</span>
-                        <span class="badge border border-success bg-transparent text-success rounded-0"><i class="bi bi-grid-1x2"></i> OOP</span>
-                    </div>
-
-                    <!-- Work / Projects Section -->
-                    <div class="mt-5 pt-5" id="work">
-                        <div class="d-flex justify-content-between align-items-center mb-4">
-                            <p class="text-muted fw-bold text-uppercase tracking-widest small mb-0"><span class="accent-text">//</span> WORK</p>
-                            <span class="text-muted text-uppercase tracking-wide small fw-bold">ALL REPOS <i class="bi bi-arrow-right"></i> <span class="badge bg-success bg-opacity-10 text-success ms-2 rounded-0">12 PUBLIC</span></span>
+                    <section id="about" class="mb-5" aria-labelledby="about-heading">
+                        <header class="mb-4">
+                            <p class="text-muted fw-bold text-uppercase tracking-widest small mb-3" aria-hidden="true">
+                                <span class="accent-text">//</span> ABOUT ME
+                            </p>
+                            <h2 id="about-heading" class="section-title text-uppercase fw-heavy tracking-tight mb-0 line-height-sm">
+                                CRAFTING RELIABLE SOFTWARE,<br>ONE COMMIT AT A TIME.
+                            </h2>
+                        </header>
+                        
+                        <div class="about-copy text-muted fs-5 fw-light d-flex flex-column gap-3 mb-4">
+                            <p>Currently pursuing my Information Technology degree at Pampanga State University (Class of 2028) with a 1.40 CGWA, I am a Jr. .NET Software Developer with hands-on experience delivering real-world solutions using C#, ASP.NET Core, and Microsoft SQL Server.</p>
+                            <p>I apply proven software engineering practices including Clean Architecture, CQRS, the Mediator pattern, OOP, and SOLID principles to build scalable and maintainable applications.</p>
+                            <p>I consistently deliver high-quality work, which I showcase across GitHub, LinkedIn, and Upwork — as part of my commitment to excellence in the .NET ecosystem.</p>
                         </div>
-                        <h2 class="section-title text-uppercase fw-heavy tracking-tight mb-4">RECENT PROJECTS</h2>
+                        
+                        <div class="d-flex flex-wrap gap-2 mt-4 text-uppercase" aria-label="Core Practices">
+                            <span class="badge border border-success text-success rounded-0 fw-bold py-2 px-3 badge-interactive">
+                                <i class="bi bi-check2-circle me-1" aria-hidden="true"></i> CLEAN ARCHITECTURE
+                            </span>
+                            <span class="badge border border-success text-success rounded-0 fw-bold py-2 px-3 badge-interactive">
+                                <i class="bi bi-lightning-charge me-1" aria-hidden="true"></i> CQRS + MEDIATR
+                            </span>
+                            <span class="badge border border-secondary text-secondary rounded-0 fw-bold py-2 px-3 badge-interactive">
+                                <i class="bi bi-shield me-1" aria-hidden="true"></i> SOLID PRINCIPLES
+                            </span>
+                            <span class="badge border border-success text-success rounded-0 fw-bold py-2 px-3 badge-interactive">
+                                <i class="bi bi-grid-1x2 me-1" aria-hidden="true"></i> OOP
+                            </span>
+                        </div>
+                    </section>
+
+                    <section id="work" class="mt-5 pt-lg-5" aria-labelledby="work-heading">
+                        <header class="d-flex justify-content-between align-items-end mb-4 border-bottom border-dark pb-3">
+                            <div>
+                                <p class="text-muted fw-bold text-uppercase tracking-widest small mb-2" aria-hidden="true">
+                                    <span class="accent-text">//</span> WORK
+                                </p>
+                                <h2 id="work-heading" class="section-title text-uppercase fw-heavy tracking-tight mb-0">RECENT PROJECTS</h2>
+                            </div>
+                            <div class="text-end">
+                                <span class="text-muted text-uppercase tracking-wide small fw-bold d-none d-sm-inline-block">
+                                    ALL REPOS <i class="bi bi-arrow-right mx-1"></i> 
+                                    <span class="badge bg-success bg-opacity-10 text-success rounded-0 px-2 py-1">12 PUBLIC</span>
+                                </span>
+                            </div>
+                        </header>
                         
                         <div class="row g-4 pt-2">
-                            <!-- Project Card 1 -->
                             <div class="col-md-6">
-                                <div class="project-card h-100 p-4 d-flex flex-column">
-                                    <div class="d-flex justify-content-between text-muted small fw-bold mb-3 tracking-wide text-uppercase" style="font-size: 0.75rem;">
+                                <article class="project-card h-100 p-4 d-flex flex-column bg-white position-relative">
+                                    <header class="d-flex justify-content-between align-items-center text-muted small fw-bold mb-3 tracking-wide text-uppercase" style="font-size: 0.75rem;">
                                         <span>01 / ELECTION PLATFORM</span>
-                                        <span class="bg-light px-2 py-1">PRIVATE REPO</span>
-                                    </div>
+                                        <span class="bg-light border border-dark px-2 py-1">PRIVATE REPO</span>
+                                    </header>
                                     <div class="mb-3">
-                                        <span class="badge bg-success bg-opacity-10 text-success px-2 py-1 rounded-0 tracking-wide"><i class="bi bi-star-fill"></i> CAPSTONE PROJECT</span>
+                                        <span class="badge bg-success bg-opacity-10 text-success px-2 py-1 rounded-0 tracking-wide border border-success border-opacity-25">
+                                            <i class="bi bi-star-fill me-1" aria-hidden="true"></i> CAPSTONE PROJECT
+                                        </span>
                                     </div>
-                                    <h5 class="fw-heavy text-uppercase tracking-tight">STUDENT ORG ELECTION SYSTEM</h5>
-                                    <p class="text-muted small mb-4 fw-light mt-2" style="line-height: 1.6;">Voting platform with real-time updates, announcements, and admin dashboard for Pampanga State University.</p>
-                                    <!-- TODO: to added the actual link -->
-                                    <a onclick="window.location.reload(true)" class="text-success text-decoration-none fw-bold small text-uppercase tracking-wide mt-auto">VIEW PROJECT <i class="bi bi-arrow-right"></i></a>
-                                </div>
+                                    <h3 class="h5 fw-heavy text-uppercase tracking-tight text-dark mb-2">STUDENT ORG ELECTION SYSTEM</h3>
+                                    <p class="text-muted small mb-4 fw-light" style="line-height: 1.6;">Voting platform with real-time updates, announcements, and admin dashboard for Pampanga State University.</p>
+                                    <a onclick="window.location.reload(true)" class="stretched-link text-success text-decoration-none fw-bold small text-uppercase tracking-wide mt-auto action-link">
+                                        VIEW PROJECT <i class="bi bi-arrow-right ms-1 transition-icon"></i>
+                                    </a>
+                                </article>
                             </div>
-                            <!-- Project Card 2 -->
+                            
                             <div class="col-md-6">
-                                <div class="project-card h-100 p-4 d-flex flex-column">
-                                    <div class="d-flex justify-content-between text-muted small fw-bold mb-3 tracking-wide text-uppercase" style="font-size: 0.75rem;">
+                                <article class="project-card h-100 p-4 d-flex flex-column bg-white position-relative">
+                                    <header class="d-flex justify-content-between align-items-center text-muted small fw-bold mb-3 tracking-wide text-uppercase" style="font-size: 0.75rem;">
                                         <span>02 / SEARCHING</span>
-                                        <span class="bg-light px-2 py-1">PRIVATE REPO</span>
-                                    </div>
+                                        <span class="bg-light border border-dark px-2 py-1">PRIVATE REPO</span>
+                                    </header>
                                     <div class="mb-3">
-                                        <span class="badge bg-primary bg-opacity-10 text-primary px-2 py-1 rounded-0 tracking-wide"><i class="bi bi-briefcase"></i> INTERNSHIP PROJECT</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary px-2 py-1 rounded-0 tracking-wide border border-primary border-opacity-25">
+                                            <i class="bi bi-briefcase me-1" aria-hidden="true"></i> INTERNSHIP PROJECT
+                                        </span>
                                     </div>
-                                    <h5 class="fw-heavy text-uppercase tracking-tight">SNAPSEARCH DESKTOP APP</h5>
-                                    <p class="text-muted small mb-4 fw-light mt-2" style="line-height: 1.6;">A desktop search application for quickly finding files and folders with a simple interface.</p>
-                                    <!-- TODO: to added the actual link -->
-                                    <a onclick="window.location.reload(true)" class="text-success text-decoration-none fw-bold small text-uppercase tracking-wide mt-auto">VIEW PROJECT <i class="bi bi-arrow-right"></i></a>
-                                </div>
+                                    <h3 class="h5 fw-heavy text-uppercase tracking-tight text-dark mb-2">SNAPSEARCH DESKTOP APP</h3>
+                                    <p class="text-muted small mb-4 fw-light" style="line-height: 1.6;">A desktop search application for quickly finding files and folders with a simple interface.</p>
+                                    <a onclick="window.location.reload(true)" class="stretched-link text-success text-decoration-none fw-bold small text-uppercase tracking-wide mt-auto action-link">
+                                        VIEW PROJECT <i class="bi bi-arrow-right ms-1 transition-icon"></i>
+                                    </a>
+                                </article>
                             </div>
                         </div>
-                    </div>
+                    </section>
                 </div>
 
-                <!-- Contact & Stack Sidebar -->
-                <div class="col-lg-5" id="contact">
+                <aside class="col-lg-5" id="sidebar-context">
                     <div class="sidebar-wrapper ps-lg-4">
                         
-                        <!-- Contact Block -->
-                        <div class="mb-5 pb-4 border-bottom border-dark">
-                            <p class="text-muted fw-bold text-uppercase tracking-widest small mb-3"><span class="accent-text">//</span> CONTACT</p>
-                            <h3 class="fw-heavy tracking-tight text-uppercase mb-3">LET'S BUILD SOMETHING GREAT.</h3>
+                        <address id="contact" class="mb-5 pb-4 border-bottom border-dark fst-normal">
+                            <header class="mb-3">
+                                <p class="text-muted fw-bold text-uppercase tracking-widest small mb-2" aria-hidden="true">
+                                    <span class="accent-text">//</span> CONTACT
+                                </p>
+                                <h2 class="h3 fw-heavy tracking-tight text-uppercase mb-2">LET'S BUILD SOMETHING GREAT.</h2>
+                            </header>
                             <p class="text-muted mb-4 fw-light">Available for freelance projects and full-time opportunities.</p>
                             
-                            <div class="border border-dark bg-light p-3 d-flex justify-content-between align-items-center mb-3">
-                                <span class="text-muted fw-bold tracking-wide" style="font-size: 0.9rem;">kerbycatua@gmail.com</span>
-                                <i class="bi bi-copy text-muted cursor-pointer px-2"></i>
+                            <div class="email-clipboard-box border border-dark bg-light p-3 d-flex justify-content-between align-items-center mb-4 transition-all">
+                                <span class="text-dark fw-bold tracking-wide" style="font-size: 0.9rem;">kerbycatua@gmail.com</span>
+                                <button class="btn btn-link p-0 text-muted hover-accent" aria-label="Copy email to clipboard" title="Copy Email">
+                                    <i class="bi bi-copy fs-5 cursor-pointer px-2 transition-transform"></i>
+                                </button>
                             </div>
                             
-                            <div class="d-flex gap-2">
-                                <!-- TODO: to added the actual link -->
-                                <a onclick="window.location.reload(true)" class="btn border border-dark rounded-0 px-3 py-2 flex-grow-1 small text-muted text-uppercase tracking-wide fw-bold" style="font-size: 0.8rem;"><i class="bi bi-linkedin"></i> LINKEDIN</a>
-                                <a href="https://github.com/KerbyCatua" target="_blank" class="btn border border-dark rounded-0 px-3 py-2 flex-grow-1 small text-muted text-uppercase tracking-wide fw-bold" style="font-size: 0.8rem;"><i class="bi bi-github"></i> GITHUB</a>
-                                <a onclick="window.location.reload(true)" class="btn border border-dark rounded-0 px-3 py-2 flex-grow-1 small text-muted text-uppercase tracking-wide fw-bold" style="font-size: 0.8rem;"><i class="bi bi-briefcase"></i> UPWORK</a>
-                            </div>
-                        </div>
+                            <nav class="social-links d-flex gap-2" aria-label="Professional profiles">
+                                <a onclick="window.location.reload(true)" class="btn btn-brutal border border-dark rounded-0 px-3 py-2 flex-grow-1 small text-muted text-uppercase tracking-wide fw-bold d-flex justify-content-center align-items-center gap-2">
+                                    <i class="bi bi-linkedin fs-6" aria-hidden="true"></i> <span style="font-size: 0.8rem;">LINKEDIN</span>
+                                </a>
+                                <a href="https://github.com/KerbyCatua" target="_blank" class="btn btn-brutal border border-dark rounded-0 px-3 py-2 flex-grow-1 small text-muted text-uppercase tracking-wide fw-bold d-flex justify-content-center align-items-center gap-2">
+                                    <i class="bi bi-github fs-6" aria-hidden="true"></i> <span style="font-size: 0.8rem;">GITHUB</span>
+                                </a>
+                                <a onclick="window.location.reload(true)" class="btn btn-brutal border border-dark rounded-0 px-3 py-2 flex-grow-1 small text-muted text-uppercase tracking-wide fw-bold d-flex justify-content-center align-items-center gap-2">
+                                    <i class="bi bi-briefcase fs-6" aria-hidden="true"></i> <span style="font-size: 0.8rem;">UPWORK</span>
+                                </a>
+                            </nav>
+                        </address>
 
-                        <!-- Tech Stack Block -->
-                        <div id="tech">
-                            <p class="text-muted fw-bold text-uppercase tracking-widest small mb-3"><span class="accent-text">//</span> STACK</p>
-                            <h3 class="fw-heavy tracking-tight text-uppercase mb-4">TECH STACK</h3>
+                        <section id="tech" aria-labelledby="tech-heading">
+                            <header class="mb-4">
+                                <p class="text-muted fw-bold text-uppercase tracking-widest small mb-2" aria-hidden="true">
+                                    <span class="accent-text">//</span> STACK
+                                </p>
+                                <h2 id="tech-heading" class="h3 fw-heavy tracking-tight text-uppercase mb-0">TECH STACK</h2>
+                            </header>
                             
-                            <div class="mb-4">
-                                <p class="text-muted small fw-bold tracking-widest text-uppercase mb-3">BACKEND</p>
-                                <div class="d-flex flex-wrap gap-2 text-muted fw-bold">
-                                    <span class="border border-dark px-3 py-2 small rounded-0">C++</span>
-                                    <span class="border border-dark px-3 py-2 small rounded-0">C#</span>
-                                    <span class="border border-dark px-3 py-2 small rounded-0">Java</span>
-                                    <span class="border border-dark px-3 py-2 small rounded-0">ASP.NET Core</span>
-                                    <span class="border border-dark px-3 py-2 small rounded-0">MS SQL</span>
-                                    <span class="border border-dark px-3 py-2 small rounded-0">MySQL</span>
-                                    <span class="border border-dark px-3 py-2 small rounded-0">JWT</span>
-                                    <span class="border border-dark px-3 py-2 small rounded-0">AutoMapper</span>
+                            <div class="tech-category mb-4">
+                                <h3 class="text-muted small fw-bold tracking-widest text-uppercase mb-3 d-flex align-items-center gap-2">
+                                    <i class="bi bi-hdd-network"></i> BACKEND
+                                </h3>
+                                <div class="d-flex flex-wrap gap-2 fw-bold">
+                                    <span class="tech-pill bg-white border border-dark px-3 py-2 small rounded-0 text-dark">C++</span>
+                                    <span class="tech-pill bg-white border border-dark px-3 py-2 small rounded-0 text-dark">C#</span>
+                                    <span class="tech-pill bg-white border border-dark px-3 py-2 small rounded-0 text-dark">Java</span>
+                                    <span class="tech-pill bg-white border border-dark px-3 py-2 small rounded-0 text-dark">ASP.NET Core</span>
+                                    <span class="tech-pill bg-white border border-dark px-3 py-2 small rounded-0 text-dark">MS SQL</span>
+                                    <span class="tech-pill bg-white border border-dark px-3 py-2 small rounded-0 text-dark">MySQL</span>
+                                    <span class="tech-pill bg-white border border-dark px-3 py-2 small rounded-0 text-dark">JWT</span>
+                                    <span class="tech-pill bg-white border border-dark px-3 py-2 small rounded-0 text-dark">AutoMapper</span>
                                 </div>
                             </div>
                             
-                            <div class="mb-4">
-                                <p class="text-muted small fw-bold tracking-widest text-uppercase mb-3">FRONTEND</p>
-                                <div class="d-flex flex-wrap gap-2 text-muted fw-bold">
-                                    <span class="border border-dark px-3 py-2 small rounded-0">HTML</span>
-                                    <span class="border border-dark px-3 py-2 small rounded-0">CSS</span>
-                                    <span class="border border-dark px-3 py-2 small rounded-0">JavaScript</span>
-                                    <span class="border border-dark px-3 py-2 small rounded-0">Bootstrap</span>
-                                    <span class="border border-dark px-3 py-2 small rounded-0">Tailwind CSS</span>
-                                    <span class="border border-dark px-3 py-2 small rounded-0">React</span>
+                            <div class="tech-category mb-4">
+                                <h3 class="text-muted small fw-bold tracking-widest text-uppercase mb-3 d-flex align-items-center gap-2">
+                                    <i class="bi bi-browser-edge"></i> FRONTEND
+                                </h3>
+                                <div class="d-flex flex-wrap gap-2 fw-bold">
+                                    <span class="tech-pill bg-white border border-dark px-3 py-2 small rounded-0 text-dark">HTML</span>
+                                    <span class="tech-pill bg-white border border-dark px-3 py-2 small rounded-0 text-dark">CSS</span>
+                                    <span class="tech-pill bg-white border border-dark px-3 py-2 small rounded-0 text-dark">JavaScript</span>
+                                    <span class="tech-pill bg-white border border-dark px-3 py-2 small rounded-0 text-dark">Bootstrap</span>
+                                    <span class="tech-pill bg-white border border-dark px-3 py-2 small rounded-0 text-dark">Tailwind CSS</span>
+                                    <span class="tech-pill bg-white border border-dark px-3 py-2 small rounded-0 text-dark">React</span>
                                 </div>
                             </div>
 
-                            <div class="mb-4">
-                                <p class="text-muted small fw-bold tracking-widest text-uppercase mb-3">TOOLS / GRAPHICS & DESIGN TOOLS</p>
-                                <div class="d-flex flex-wrap gap-2 text-muted fw-bold">
-                                    <span class="border border-dark px-3 py-2 small rounded-0">Git</span>
-                                    <span class="border border-dark px-3 py-2 small rounded-0">Figma</span>
-                                    <span class="border border-dark px-3 py-2 small rounded-0">Canva</span>
-                                    <span class="border border-dark px-3 py-2 small rounded-0">Alight Motion Pro</span>
-                                    <span class="border border-dark px-3 py-2 small rounded-0">CapCut Pro</span>
-                                    <span class="border border-dark px-3 py-2 small rounded-0">After Effects</span>
-                                    <span class="border border-dark px-3 py-2 small rounded-0">Premiere Pro</span>
-                                    <span class="border border-dark px-3 py-2 small rounded-0">Lightroom</span>
+                            <div class="tech-category mb-4">
+                                <h3 class="text-muted small fw-bold tracking-widest text-uppercase mb-3 d-flex align-items-center gap-2">
+                                    <i class="bi bi-tools"></i> TOOLS / GRAPHICS
+                                </h3>
+                                <div class="d-flex flex-wrap gap-2 fw-bold">
+                                    <span class="tech-pill bg-white border border-dark px-3 py-2 small rounded-0 text-dark">Git</span>
+                                    <span class="tech-pill bg-white border border-dark px-3 py-2 small rounded-0 text-dark">Figma</span>
+                                    <span class="tech-pill bg-white border border-dark px-3 py-2 small rounded-0 text-dark">Canva</span>
+                                    <span class="tech-pill bg-white border border-dark px-3 py-2 small rounded-0 text-dark">Alight Motion Pro</span>
+                                    <span class="tech-pill bg-white border border-dark px-3 py-2 small rounded-0 text-dark">CapCut Pro</span>
+                                    <span class="tech-pill bg-white border border-dark px-3 py-2 small rounded-0 text-dark">After Effects</span>
+                                    <span class="tech-pill bg-white border border-dark px-3 py-2 small rounded-0 text-dark">Premiere Pro</span>
+                                    <span class="tech-pill bg-white border border-dark px-3 py-2 small rounded-0 text-dark">Lightroom</span>
                                 </div>
                             </div>
-
-                        </div>
-
+                        </section>
                     </div>
-                </div>
-                
+                </aside>
             </div>
 
             <hr class="my-5 border-dark">

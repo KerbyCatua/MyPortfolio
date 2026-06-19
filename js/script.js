@@ -1,17 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
     
     // --- Copy to Clipboard Logic ---
-    const copyIcon = document.querySelector('.bi-copy');
-    if(copyIcon) {
-        copyIcon.addEventListener('click', (e) => {
-            const emailSpan = e.target.previousElementSibling;
-            if(emailSpan) {
-                navigator.clipboard.writeText(emailSpan.innerText);
-                const originalIcon = copyIcon.className;
-                copyIcon.className = 'bi bi-check2 text-success cursor-pointer px-2';
+    const copyBtn = document.querySelector('.email-clipboard-box button');
+    const emailText = document.querySelector('.email-clipboard-box span');
+    const copyIcon = document.querySelector('.email-clipboard-box i');
+    if (copyBtn && emailText && copyIcon) {
+        copyBtn.addEventListener('click', async () => {
+            try {
+                // 1. Asynchronously write the text to the clipboard
+                await navigator.clipboard.writeText(emailText.innerText.trim());
+                
+                // 2. Cache the original icon classes
+                const originalIconClasses = copyIcon.className;
+                
+                // 3. Swap the icon to a success checkmark and make it green
+                copyIcon.className = 'bi bi-check2 fs-5 cursor-pointer px-2 transition-transform text-success';
+                
+                // 4. Revert back to the original copy icon after 2 seconds
                 setTimeout(() => {
-                    copyIcon.className = originalIcon;
+                    copyIcon.className = originalIconClasses;
                 }, 2000);
+
+            } catch (err) {
+                console.error('Failed to copy to clipboard: ', err);
             }
         });
     }
